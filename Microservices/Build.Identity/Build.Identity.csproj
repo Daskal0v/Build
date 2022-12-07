@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Common\Behaviours\" />
+    <Folder Include="Application\Common\Exceptions\" />
+    <Folder Include="Application\Common\Interfaces\" />
+    <Folder Include="Application\Common\Mappings\" />
+    <Folder Include="Application\Common\Models\" />
+    <Folder Include="Application\Common\Security\" />
+    <Folder Include="Application\EntitySQRS\Commands\" />
+    <Folder Include="Application\EntitySQRS\EventHandlers\" />
+    <Folder Include="Application\EntitySQRS\Queries\" />
+    <Folder Include="Core\Common\" />
+    <Folder Include="Core\Enums\" />
+    <Folder Include="Core\Events\" />
+    <Folder Include="Core\Exceptions\" />
+    <Folder Include="Core\ValueObjects\" />
+    <Folder Include="Infrastructure\Persistence\Configurations\" />
+    <Folder Include="Infrastructure\Persistence\Migrations\" />
+    <Folder Include="Infrastructure\Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+  </ItemGroup>
+
+</Project>

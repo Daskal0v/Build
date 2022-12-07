@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+package Build.v1;
+
+import "google/api/annotations.proto";
+import "Protos/BaseResponse.proto";
+
+option csharp_namespace = "Build.Web.Protos";
+
+service ProjectServiceGrpc {
+    rpc CreateProject (CreateProjectRequest) returns (CreateProjectResponse) {
+        option (google.api.http) = {
+            post: "/v1/project",
+            body: "*"
+        };
+    };
+
+    rpc UpdateProject (UpdateProjectRequest) returns (UpdateProjectResponse) {
+        option (google.api.http) = {
+            put: "/v1/project",
+            body: "*"
+        };
+    };
+
+    rpc GetProject (GetProjectRequest) returns (GetProjectResponse) {
+        option (google.api.http) = {
+            get: "/v1/project/{ProjectId}"
+        };
+    };
+
+    rpc ListProjects (ListProjectsRequest) returns (ListProjectsResponse) {
+        option (google.api.http) = {
+            get: "/v1/projects"
+        };
+    };
+
+    rpc DeleteProject (DeleteProjectRequest) returns (DeleteProjectResponse) {
+        option (google.api.http) = {
+            delete: "/v1/project/{ProjectId}"
+        };
+    };
+}
+
+message CreateProjectRequest {
+
+}
+
+message CreateProjectResponse {
+    BaseResponse Response = 1;
+}
+
+message UpdateProjectRequest {
+
+}
+
+message UpdateProjectResponse {
+    BaseResponse Response = 1;
+}
+
+message GetProjectRequest {
+    int32 ProjectId = 1;
+}
+
+message GetProjectResponse {
+    BaseResponse Response = 1;
+}
+
+message ListProjectsRequest {
+}
+
+message ListProjectsResponse {
+    BaseResponse Response = 1;
+}
+
+message DeleteProjectRequest {
+    int32 ProjectId = 1;
+}
+
+message DeleteProjectResponse {
+    BaseResponse Response = 1;
+}

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+$yellow: #f6cd52;
+:root {
+  --dark-blue: #081524;
+  --blue: #112d4e;
+  --light-blue: #6f99cb;
+  --thin-blue: #d3dce5;
+  --dark-yellow: #cfa52f;
+  --yellow: #f6cd52;
+  --light-yellow: #fff06a;
+  --white: #ffffff;
+  --gray: #6e757d;
+  --thin-yellow: #f6cd5232;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  color: var(--blue);
+  padding: 10px;
+  text-align: center;
+
+}
+
+.sub-title{
+  font-size: .8rem;
+  line-height: .8rem;
+  color: var(--gray);
+  padding: 5px;
+  text-align: center;
+}
+
+.description{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package Build.v1;
+
+import "google/protobuf/any.proto";
+
+option csharp_namespace = "Build.Web.Protos";
+
+message BaseResponse {
+	string UID = 1;
+    int32 Status = 2;
+    bool IsSuccess = 3;
+    string Message = 4;
+    google.protobuf.Any Data = 5;
+    repeated string Errors = 6;
+}

@@ -1,0 +1,10 @@
+<button color="white" class="menu-button" mat-button [matMenuTriggerFor]="menu">Home</button>
+<button color="white" class="menu-button" mat-button [matMenuTriggerFor]="menu">Clients</button>
+<button color="white" class="menu-button" mat-button [matMenuTriggerFor]="menu">Contractors</button>
+<button color="white" class="menu-button" mat-button [matMenuTriggerFor]="menu">Services</button>
+<button color="white" class="menu-button" mat-button [matMenuTriggerFor]="menu">About</button>
+
+<mat-menu #menu="matMenu" class="menu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>

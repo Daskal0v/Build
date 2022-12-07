@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+option csharp_namespace = "Build.Files.Proto";
+
+package Build.v1;
+
+service FileServiceGrpc {
+	rpc GetFileSharedAccessSignatureURI (GetFileSharedAccessSignatureURIRequest) returns (GetFileSharedAccessSignatureURIResponse);
+    rpc CheckFileExists (CheckFileExistsRequest) returns (CheckFileExistsResponse);
+    rpc UploadFileFromStream (stream UploadFileFromStreamRequest) returns (UploadFileFromStreamResponse);
+    rpc DownloadFileToStream (DownloadFileToStreamRequest) returns (stream DownloadFileToStreamResponse);
+    rpc MoveFile (MoveFileRequest) returns (MoveFileResponse);
+	rpc ListFiles (ListFilesRequest) returns (ListFilesResponse);
+	rpc DeleteFile (DeleteFileRequest) returns (DeleteFileResponse);
+}
+
+
+message GetFileSharedAccessSignatureURIRequest {
+	string FilePath = 1;
+}
+
+message GetFileSharedAccessSignatureURIResponse {
+    string Uri = 1;
+}
+
+message CheckFileExistsRequest {
+    string FilePath = 1;
+}
+
+message CheckFileExistsResponse {
+    bool IsFileExist = 1;
+}
+
+message UploadFileFromStreamRequest {
+    string FilePath = 1;
+    bytes Chunk = 2;
+}
+
+message UploadFileFromStreamResponse {
+    bool Status = 1;
+}
+
+message DownloadFileToStreamRequest {
+    string FilePath = 1;
+}
+
+message DownloadFileToStreamResponse {
+    bytes Chunk = 1;
+}
+
+message MoveFileRequest {
+    string FilePath = 1;
+    string NewFilePath = 2;
+}
+
+message MoveFileResponse {
+    bool Status = 1;
+}
+
+message ListFilesRequest {
+    repeated string FilePath = 1;
+}
+
+message ListFilesResponse {
+    repeated FileData Files = 1;
+}
+
+message DeleteFileRequest {
+    bool IsHardDelete = 1;
+}
+
+message DeleteFileResponse {
+    bool Status = 1;
+}
+
+message FileData {
+	
+}
