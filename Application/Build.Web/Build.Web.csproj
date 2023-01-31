@@ -32,13 +32,10 @@
 
 	<!--Proto files-->
   <ItemGroup>
-	  <Protobuf Include=".\Protos\BaseResponse.proto" />
-    <Protobuf Include=".\Protos\ProjectServiceGrpc.proto" GrpcServices="Server" />
-    <Protobuf Include=".\Protos\FileServiceGrpc.proto" GrpcServices="Server" />
-  </ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="Services\" />
+	<Protobuf Include=".\Protos\BaseResponse.proto" />
+	<Protobuf Include=".\Protos\ProjectServiceGrpc.proto" GrpcServices="Server" />
+	<Protobuf Include=".\Protos\UserServiceGrpc.proto" GrpcServices="Server" />
+	<Protobuf Include=".\Protos\FileServiceGrpc.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>

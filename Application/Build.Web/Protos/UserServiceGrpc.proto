@@ -1,0 +1,55 @@
+﻿syntax = "proto3";
+
+package Build.v1;
+
+import "google/api/annotations.proto";
+import "Protos/BaseResponse.proto";
+
+option csharp_namespace = "Build.Web.Protos";
+
+service UserServiceGrpc {
+    rpc CreateUser (CreateUserRequest) returns (CreateUserResponse) {
+        option (google.api.http) = {
+            post: "/v1/user",
+            body: "*"
+        };
+    };
+
+    rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse) {
+        option (google.api.http) = {
+            put: "/v1/user",
+            body: "*"
+        };
+    };
+
+    rpc GetUser (GetUserRequest) returns (GetUserResponse) {
+        option (google.api.http) = {
+            get: "/v1/user/{userId}"
+        };
+    };
+
+    rpc DeactivateUser (DeactivateUserRequest) returns (DeactivateUserResponse) {
+        option (google.api.http) = {
+            delete: "/v1/user/{userId}"
+        };
+    };
+
+    
+}
+
+message CreateUserRequest {}
+message CreateUserResponse {
+    BaseResponse Response = 1;
+}
+message UpdateUserRequest {}
+message UpdateUserResponse {
+    BaseResponse Response = 1;
+}
+message GetUserRequest {}
+message GetUserResponse {
+    BaseResponse Response = 1;
+}
+message DeactivateUserRequest {}
+message DeactivateUserResponse {
+    BaseResponse Response = 1;
+}

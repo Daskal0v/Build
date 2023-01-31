@@ -56,14 +56,16 @@ else
 }
 
 app.UseRouting();
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHealthChecks("/health/startup");
     endpoints.MapHealthChecks("/healthz");
     endpoints.MapHealthChecks("/ready");
+    endpoints.MapGrpcService<ProjectService>();
+    endpoints.MapGrpcService<UserService>();
 });
 
-app.MapGrpcService<ProjectService>();
 app.Run();

@@ -1,22 +1,26 @@
 <section id="heading-section">
   <div>
     <div class="title">Make your dream home a reality</div>
-    <button id="button-large" mat-raised-button color="primary">Get started</button>
+    <button id="get-started" mat-raised-button color="primary">Get started</button>
   </div>
   <div>
-    <div class="decoration behind" ></div>
-    <div class="decoration above"></div>
-    <div class="decoration decoration-large"></div>
+    <app-decoration-circle size="med" id="top-decoration"></app-decoration-circle>
+    <app-decoration-circle size="large" [isPicture]="true" picSrc="../../../assets/images/dream_house.jpg"></app-decoration-circle>
+    <app-decoration-circle size="med" id="bottom-decoration"></app-decoration-circle>
 
   </div>
 </section>
 
 <section id="second-section">
   <div class="second-section-cards">
-    <app-card name="Leonard M. Sturgill" imagePath="assets/images/leonard.jpg" title="Architect" [rating]="5"></app-card>
-    <app-card name="Eva J. Thompson" imagePath="assets/images/eva.jpg" title="Interior designer" [rating]="4.3"></app-card>
-    <app-card name="Kyle Griffin" imagePath="assets/images/kyle.jpg" title="Specialty Contractor / Electrician" [rating]="4.8"></app-card>
-    <app-card name="Alfred E. Russell" imagePath="assets/images/alfred.jpg" title="General Contractor" [rating]="5"></app-card>
+    <app-card name="Leonard M. Sturgill" imagePath="assets/images/leonard.jpg" title="Architect"
+      [rating]="5"></app-card>
+    <app-card name="Eva J. Thompson" imagePath="assets/images/eva.jpg" title="Interior designer"
+      [rating]="4.3"></app-card>
+    <app-card name="Kyle Griffin" imagePath="assets/images/kyle.jpg" title="Specialty Contractor / Electrician"
+      [rating]="4.8"></app-card>
+    <app-card name="Alfred E. Russell" imagePath="assets/images/alfred.jpg" title="General Contractor"
+      [rating]="5"></app-card>
   </div>
   <div>What is Lorem Ipsum?
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -26,6 +30,66 @@
     Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
     Lorem Ipsum.</div>
 </section>
+
+<section id="easy-steps-list">
+  <div class="title">Your idea into <b>reality</b> with a few simple steps </div>
+
+  <article>
+    <details>
+      <summary>
+        <app-decoration-circle text="1" size="small"></app-decoration-circle>
+        <h1>
+          Create your account
+        </h1>
+      </summary>
+
+      <p>Sign up in NaveZ Platform absolutly free.</p>
+    </details>
+  </article>
+
+
+  <article>
+
+    <details>
+      <summary>
+        <app-decoration-circle text="2" size="small"></app-decoration-circle>
+        <h1>Describe your project</h1>
+      </summary>
+      <p>Fill the form with details that you know and you think are important. That will help the contractors provide
+        you detail and accurate proposal.</p>
+    </details>
+  </article>
+
+
+  <article>
+    <details>
+      <summary>
+        <app-decoration-circle text="3" size="small"></app-decoration-circle>
+        <h1>
+          Decide on proposals
+        </h1>
+      </summary>
+      <p>You will recive a proposals from top-rated proffesionals for your projects. Get a decision on the contractors
+        proposals and choose the right one for you. You will be able to see their portfolio with finished projects,
+        comments from their clients and communicate with them.</p>
+    </details>
+  </article>
+
+  <article>
+    <details>
+      <summary>
+        <app-decoration-circle text="4" size="small"></app-decoration-circle>
+        <h1>
+          Monitor the progres
+        </h1>
+      </summary>
+
+      <p>Entire process and stages of your project (construction or remodeling) will become more transparent than ever
+        before and you will have a full control and ability to make decisions right on time.</p>
+    </details>
+  </article>
+</section>
+
 <section id="availability-section">
   <div>
     <img alt="Navez is Available on all platforms and devices" src="assets/images/Devices.png" width="589"
@@ -36,14 +100,15 @@
     <div class="sub-title"> Access NaveZ from everyware - Web, Desktop (Windows, Mac, Linux), iOS, Android </div>
   </div>
 </section>
+
 <section id="subscribe">
-  <div class="decoration decoration-left"></div>
+  <app-decoration-circle size="med" class="decoration-left"></app-decoration-circle>
   <div>
     <div class="title">Subscribe</div>
     <div class="sub-title">Get the latest news from NaveZ</div>
   </div>
   <div class="form">
-    <input id="email" type="email" size="64" maxlength="64" required placeholder="Enter your email address" />
+    <input id="email" type="email" maxlength="64" required placeholder="Enter your email address" />
     <button mat-raised-button color="primary">Subscribe</button>
   </div>
 </section>

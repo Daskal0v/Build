@@ -1,0 +1,4 @@
+<div class="decoration" [class]="size" [ngClass]="{'picture-container' : isPicture}">
+  <img *ngIf="isPicture" [src]="picSrc" />
+  {{text}}
+</div>

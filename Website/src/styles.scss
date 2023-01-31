@@ -11,13 +11,18 @@ $yellow: #f6cd52;
   --white: #ffffff;
   --gray: #6e757d;
   --thin-yellow: #f6cd5232;
+
+  --default-margin: 50px;
 }
 
 html,
 body {
   height: 100%;
+  width: 100%;
   margin: 0;
+  font-size: 16px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
 }
 
 .title {
@@ -44,4 +49,9 @@ body {
   align-content: center;
   flex-direction: column;
   text-align: center;
+}
+
+section{
+  width: 100%;
+  padding: 20px 0;
 }

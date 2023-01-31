@@ -1,5 +1,6 @@
 ﻿namespace Build.Domain.Entities;
 
+using Build.Domain.Enums;
 using Build.Domain.ValueObjects;
 
 public class User : BaseAggregateRoot<int>
@@ -14,4 +15,6 @@ public class User : BaseAggregateRoot<int>
     public bool IsActive { get; set; }
 
     public IList<Project> Projects { get; set; }
+
+    public UserType UserType { get; set; }
 }

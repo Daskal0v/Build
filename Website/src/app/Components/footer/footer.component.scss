@@ -8,8 +8,8 @@ footer {
     gap: 50px;
     justify-content: space-around;
     > div {
-      width: 80vw;
-      min-height: 10vh;
+      // width: 80vw;
+      // min-height: 10vh;
       flex: 3;
       > div {
         display: flex;
@@ -27,6 +27,27 @@ footer {
     p {
       vertical-align: middle;
       display: table-cell;
+    }
+  }
+}
+
+@media (min-width: 1055px) {
+  footer {
+    > .footer-section {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      
+      > .footer-section-logo{
+        margin-left: var(--default-margin);
+      }
+    }
+  }
+}
+@media (max-width: 1055px) {
+  footer {
+    > .footer-section {
+      flex-direction: column;
     }
   }
 }

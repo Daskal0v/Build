@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon'
-
+import {OverlayModule} from '@angular/cdk/overlay';
 import { FooterComponent } from './Components/footer/footer.component';
 import { NavigationComponent } from './Components/navigation/navigation.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
@@ -17,6 +17,7 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { CardComponent } from './Components/Shared/card/card.component';
 import { RatingComponent } from './Components/Shared/rating/rating.component';
+import { DecorationCircleComponent } from './Components/Shared/decoration-circle/decoration-circle.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RatingComponent } from './Components/Shared/rating/rating.component';
     MenuComponent,
     PageNotFoundComponent,
     CardComponent,
-    RatingComponent
+    RatingComponent,
+    DecorationCircleComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { RatingComponent } from './Components/Shared/rating/rating.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    OverlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
